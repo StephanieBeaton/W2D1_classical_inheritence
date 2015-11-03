@@ -19,7 +19,7 @@
 
 module Flight
 
-  attr_accessor :airspeed_velocity
+  # attr_accessor :airspeed_velocity
 
   # attr_reader :fly
 
@@ -27,17 +27,17 @@ module Flight
     puts "I'm a #{self.class}, I'm flying!"
   end
 
-  # def airspeed_velocity=(airspeed_velocity)
+  def airspeed_velocity=(airspeed_velocity)
 
-  #     @airspeed_velocity = airspeed_velocity
+      @airspeed_velocity = airspeed_velocity
 
-  # end
+  end
 
-  # def airspeed_velocity(airspeed_velocity)
+  def airspeed_velocity
 
-  #     @airspeed_velocity
+      @airspeed_velocity
 
-  # end
+  end
 
 end
 
@@ -120,6 +120,7 @@ class Parrot < Animal
   def initialize
     @num_legs = 0
     @warm_blooded = true
+    @airspeed_velocity = '15mph'
     super
   end
 
@@ -172,7 +173,7 @@ puts ""
 
 puts "polly.fly"
 polly.fly
-polly.airspeed_velocity = '20mph'
+# polly.airspeed_velocity = '20mph'
 puts "polly.airspeed_velocity = #{polly.airspeed_velocity}"
 
 puts "batty.fly"
